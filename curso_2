@@ -33,7 +33,7 @@ def estudante(nome, idade, *args):
   for a in args:
     print('Nota:',a)
   print('Média:',sum(args)/len(args))
-
+1232
 
 
 
