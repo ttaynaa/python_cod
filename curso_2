@@ -1,0 +1,35 @@
+# modulo 1 ----------------------------------------
+# Parte 1: Parâmentros *args
+# Assim como vimos, o *args é uma sintaxe que permite passarmos uma sequência de parâmetros de comprimento variável.
+
+def estudante(nome, idade, *args):
+  print("nome:", nome)
+  print("idade", idade)
+  print(args, type(args))
+  
+  estudante("João", "50")
+  
+  #saida: 
+  nome: João
+idade 50
+() <classe 'tupla'>
+
+
+estudante("João", "50", 20, 30)
+  #saida: 
+nome: João
+idade 50
+(20, 30) <class 'tuple'>
+
+estudante("João", "50", [20, 30], 10, "ola")
+  #saida: 
+nome: João
+idade 50
+([20, 30], 10, 'ola') <class 'tuple'>
+
+def estudante(nome, idade, *args):
+  print("nome:", nome)
+  print("idade", idade)
+  for a in args:
+    print('Nota:',a)
+  print('Média:',sum(args)/len(args))
